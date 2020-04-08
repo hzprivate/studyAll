@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: mydemo
+  datasource:
+    name: mydemo
+    url: jdbc:mysql://192.168.20.14:3306/hztest
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat,wall
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1 from dual
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+  cache:
+    ehcache:
+      config: 'classpath:ehcache.xml'
+
+server:
+  port: 8080
+  tomcat:
+    max-connections: 30000
+mybatis:
+  typeAliasesPackage: com.springboot.springbootehcache.beans
+#  mapperLocations: classpath:mapper/*.xml
+
+
+
+
