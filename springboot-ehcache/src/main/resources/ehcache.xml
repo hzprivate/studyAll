@@ -10,7 +10,7 @@
         diskPersistent="false"
         diskExpiryThreadIntervalSeconds="120" />
 
-    <cache 
+    <cache
     	name="user"
         maxEntriesLocalHeap="2000"
         eternal="false"
@@ -20,3 +20,4 @@
         statistics="true">
     </cache>
 </ehcache>
+

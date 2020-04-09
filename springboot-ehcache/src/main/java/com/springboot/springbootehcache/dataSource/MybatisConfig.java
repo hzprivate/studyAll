@@ -105,10 +105,10 @@ public class MybatisConfig {
 
 //        LogFactory.useLog4JLogging();    //日志文件报错
         //添加XML目录
-        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        String xmlPath = environment.getProperty("mybatis.mapperLocations");
+//        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+//        String xmlPath = environment.getProperty("mybatis.mapperLocations");
         try {
-            bean.setMapperLocations(resolver.getResources(xmlPath));
+//            bean.setMapperLocations(resolver.getResources(xmlPath));
             return bean.getObject();
         } catch (Exception e) {
             e.printStackTrace();
