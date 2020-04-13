@@ -1,7 +1,6 @@
 package com.springboot.beanname.dao.daoImpl;
 
 import com.springboot.beanname.dao.UserDao;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
 /**

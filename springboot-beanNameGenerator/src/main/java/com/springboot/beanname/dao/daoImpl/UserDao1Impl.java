@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
  * @author hz
  * @create 2020-04-09
  */
-@Repository("userDao1")
+@Repository("userDao1111")
 public class UserDao1Impl implements UserDao {
 }
