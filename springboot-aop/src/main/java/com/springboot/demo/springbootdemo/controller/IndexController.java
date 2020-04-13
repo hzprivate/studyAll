@@ -16,8 +16,6 @@ public class IndexController {
     @RequestMapping("/one")
     public void methodOne() {
         System.out.println("业务方法本身");
-//       TestConfig testConfig = new TestConfig();
-//       testConfig.print();
     }
 
 }
