@@ -8,7 +8,7 @@ spring:
     name: mydemo
   datasource:
     name: mydemo
-    url: jdbc:mysql://192.168.20.14:3306/hztest
+    url: jdbc:mysql://127.0.0.1:3306/hztest
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
