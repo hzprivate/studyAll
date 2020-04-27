@@ -23,14 +23,14 @@ public class MyAspect {
     @Pointcut("within(com.mydemo.aop.dao..*)")
     private void inTrading() {}
 
-//
-//    @Pointcut("target(com.mydemo.aop.dao.UserDao)")
-//    private void testTarget() {}
 
-    @Pointcut("args(java.lang.Integer)")
+    @Pointcut("this(com.mydemo.aop.dao.TestDaoImpl)")
+    private void testThis() {}
+
+    @Pointcut("args(java.lang.String)")
     private void testArgs() {}
 
-    @Before("testArgs()")
+    @Before("testThis()")
     public void test(){
 
         System.out.println("before");
