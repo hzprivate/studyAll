@@ -27,6 +27,7 @@ public class CheckCaseValidator implements ConstraintValidator<CheckCase, CharSe
     @Override
     public boolean isValid(CharSequence object, ConstraintValidatorContext constraintContext) {
         if ( object == null ) {
+            //参数可以为null
             return true;
         }
         if ( caseMode == CaseMode.UPPER ) {
