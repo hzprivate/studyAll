@@ -13,6 +13,8 @@ import javax.validation.ValidationException;
 import java.util.Set;
 
 /**
+ * com.hibernate.validator.controller.RequestParamController  requestParam参数非实体类校验
+ * 定义捕捉controller层统一报错
  * @author hz
  * @create 2020-04-27
  */

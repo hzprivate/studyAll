@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.constraints.Pattern;
 
 /**
- * <p>测试 RequestParam 参数校验 </p>
+ * <p>测试 RequestParam 校验验证 </p>
  *
  * @author hz
- * @create 2020-04-08
+ * @create 2020-04-28
  */
 @RestController
 @Validated
@@ -20,7 +20,7 @@ public class RequestParamController {
      * @param name
      * @param age
      */
-    @RequestMapping("/testValidator")
+    @RequestMapping("/testRequestParam")
     public void testValidator(@NotBlank(message="姓名不能为空") String name,@Pattern(regexp="^[0-9]{1,2}$",message="年龄不正确") String age) {
 
 
