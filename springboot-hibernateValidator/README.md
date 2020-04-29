@@ -1,5 +1,6 @@
 # studyAll
 1.学习 hibernateValidator的使用
+官方文档地址：https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-class-level-constraints
     1.1 对象里的基本属性校验
     1.2 对象级联校验 例如对象中引用List对象
     1.3 校验错误：快速失败返回模式true 和普通返回模式false （default）
