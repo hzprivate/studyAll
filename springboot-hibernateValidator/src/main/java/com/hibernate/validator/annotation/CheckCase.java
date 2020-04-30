@@ -25,7 +25,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Constraint(validatedBy = { CheckCaseValidator.class})
 public @interface CheckCase {
 
-    String message() default "{org.hibernate.validator.referenceguide.chapter06.CheckCase." +
+    String message() default "{com.hibernate.validator.annotation.CheckCase." +
             "message}";
 
     Class<?>[] groups() default { };//分组验证。默认分组default

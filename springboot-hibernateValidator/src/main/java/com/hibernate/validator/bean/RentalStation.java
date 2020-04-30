@@ -3,24 +3,22 @@ package com.hibernate.validator.bean;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 /**
  * @author hz
- * @create 2020-04-29
+ * @create 2020-04-30
  */
 @Data
-@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class RentalStation {
 
-
-    public void rentCar(
-            @NotNull String name,
-            @Min(1) int age) {
-        System.out.println(name+","+age);
+    @NotNull(message = "集合不能为空")
+    public List<Car> getAvailableCars() {
+        //...
+        return null;
     }
+
 }

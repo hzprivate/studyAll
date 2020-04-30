@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
- * <p>测试简单的Student实体类对象属性验证 </p>
+ * <p>测试 级联校验Teacher bean对象属性</p>
  *
  * @author hz
  * @create 2020-04-28

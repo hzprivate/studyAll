@@ -1,14 +1,9 @@
 package com.hibernate.validator.test;
 
-import com.hibernate.validator.Util.Util;
+import com.hibernate.validator.common.Util;
 import com.hibernate.validator.bean.*;
 import org.hibernate.validator.HibernateValidator;
-import org.hibernate.validator.constraints.Length;
-import org.springframework.validation.annotation.Validated;
-
 import javax.validation.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -19,7 +14,7 @@ import java.util.Set;
  * @author hz
  * @create 2020-04-28
  */
-public class test {
+public class DemoTest {
     /**
      * failFast：true  快速失败返回模式    false 普通模式
      * @return
@@ -90,12 +85,47 @@ public class test {
 
     }
 
+    /**
+     * 测试自定义 类级别约束
+     */
+    public static void test5(){
+        List<Student> studentList = new ArrayList<>();
+        Student student = Student.builder().age("40").name("hz").build();
+        for (int i = 0; i < 30; i++) {
+            studentList.add(student);
+        }
+        BusCar busCar = BusCar.builder().seatCount(20).student(studentList).build();
+        Set<ConstraintViolation<BusCar>>  constraintViolations = getValidator().validate(busCar);
+        Iterator<ConstraintViolation<BusCar>> iterator = constraintViolations.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next().getMessage());
+        }
+
+    }
+
+    /**
+     * 测试方法级别约束
+     */
+    public static void test6(){
+        RentalStation rentalStation = RentalStation.builder().build();
+        List<Car> availableCars = rentalStation.getAvailableCars();
+
+        Set<ConstraintViolation<RentalStation>>  constraintViolations = getValidator().validate(rentalStation);
+        Iterator<ConstraintViolation<RentalStation>> iterator = constraintViolations.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next().getMessage());
+        }
+
+    }
+
 
     public static void main(String[] args) {
 //        test1();
 //        test2();
 //        test3();
-        test4();
+//        test4();
+//        test5();
+        test6();
     }
 
 }

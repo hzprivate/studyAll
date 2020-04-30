@@ -6,6 +6,7 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 /**
+ * 自定义CaeckCase注解约束验证器
  * @author hz
  * @create 2020-04-29
  */
@@ -13,7 +14,7 @@ public class CheckCaseValidator implements ConstraintValidator<CheckCase, CharSe
     /**
      * ConstraintValidator<CheckCase,String>
      * 第一个指定要验证的注解类型（CheckCase），
-     * 第二个指定验证器可以处理的元素的类型（String）
+     * 第二个指定验证器可以处理的元素的类型（CharSequence）
      * 如果约束条件支持几种数据类型，
      * 则必须ConstraintValidator为每种允许的类型实现，并在约束条件注解处进行注册，如上所述。
      */

@@ -1,6 +1,10 @@
 package com.hibernate.validator.controller;
 
-import org.hibernate.validator.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +19,7 @@ import javax.validation.constraints.Pattern;
 @RestController
 @Validated
 public class RequestParamController {
+    private Logger logger = LoggerFactory.getLogger(RequestParamController.class);
     /**
      * 通过 统一捕捉ConstraintViolationException异常，返回错误messgae信息
      * @param name
@@ -25,5 +30,4 @@ public class RequestParamController {
 
 
     }
-
 }

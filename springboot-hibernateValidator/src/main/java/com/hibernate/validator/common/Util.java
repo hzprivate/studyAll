@@ -1,4 +1,4 @@
-package com.hibernate.validator.Util;
+package com.hibernate.validator.common;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
