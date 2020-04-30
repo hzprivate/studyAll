@@ -15,6 +15,7 @@ import java.io.IOException;
  * @create 2020-04-13
  */
 public class MyTypeFilter implements TypeFilter {
+    @Override
     public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory)
             throws IOException {
         AnnotationMetadata annotationMetadata = metadataReader.getAnnotationMetadata();
