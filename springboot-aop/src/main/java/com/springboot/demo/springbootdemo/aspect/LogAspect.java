@@ -21,7 +21,7 @@ public class LogAspect {
     }
 
     @Around("poincount()")
-    public void Around(ProceedingJoinPoint joinPoint){
+    public void around(ProceedingJoinPoint joinPoint){
         System.out.println("开始进入环绕通知：");
         try {
             // 执行方法
