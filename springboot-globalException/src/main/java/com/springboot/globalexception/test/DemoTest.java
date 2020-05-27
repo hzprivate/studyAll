@@ -5,6 +5,9 @@ import com.springboot.globalexception.bean.User;
 import com.springboot.globalexception.dao.UserDao;
 import org.junit.Test;
 import org.springframework.util.Assert;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * @author hz
@@ -12,7 +15,7 @@ import org.springframework.util.Assert;
  */
 public class DemoTest {
     @Test
-    public void test1(){
+    public void test1() {
         UserDao userDao = new UserDao();
         User user = userDao.getUserById("123");
         Assert.notNull(user, "用户不存在.");
@@ -21,8 +24,9 @@ public class DemoTest {
 //            throw new IllegalArgumentException("用户不存在.");
 //        }
     }
+
     @Test
-    public void test2(){
+    public void test2() {
         System.out.println(ResponseEnum.BAD_USER_TYPE.getCode());
     }
 
