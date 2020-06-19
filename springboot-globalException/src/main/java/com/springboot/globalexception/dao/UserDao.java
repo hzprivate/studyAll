@@ -1,6 +1,6 @@
 package com.springboot.globalexception.dao;
 
-import com.springboot.globalexception.bean.User;
+import com.springboot.globalexception.domain.User;
 
 /**
  * @author hz

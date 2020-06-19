@@ -1,4 +1,4 @@
-package com.springboot.globalexception.bean;
+package com.springboot.globalexception.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
