@@ -22,8 +22,8 @@ public class MyTypeFilter implements TypeFilter {
         ClassMetadata classMetadata = metadataReader.getClassMetadata();
         Resource resource = metadataReader.getResource();
         String className = classMetadata.getClassName();
-        // 检测名字包含 com.springboot.beanname.bean.bean1 的bean
-        if(className.contains("com.springboot.beanname.bean.bean1")){
+        // 检测名字包含 com.springboot.beanname.domain.bean1 的bean
+        if(className.contains("com.springboot.beanname.domain.bean1")){
             return true;
         }
         return false;

@@ -25,7 +25,7 @@ public class ApplicationStartup implements ApplicationListener<ContextRefreshedE
 
           //开始测试自定义 BeanNameGenerator
           //通过byName取Bean对象
-//        Student student1 =(Student) event.getApplicationContext().getBean("com.springboot.beanname.bean.bean1.Student");
+//        Student student1 =(Student) event.getApplicationContext().getBean("com.springboot.beanname.domain.bean1.Student");
 //        Student student2 =(Student) event.getApplicationContext().getBean("student");
 //        System.out.println("=======student1:"+student1.hashCode());
 //        System.out.println("=======student2:"+student2.hashCode());
