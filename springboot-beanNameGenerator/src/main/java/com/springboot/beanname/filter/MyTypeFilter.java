@@ -15,6 +15,7 @@ import java.io.IOException;
  * @create 2020-04-13
  */
 public class MyTypeFilter implements TypeFilter {
+    @Override
     public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory)
             throws IOException {
         AnnotationMetadata annotationMetadata = metadataReader.getAnnotationMetadata();
@@ -22,7 +23,7 @@ public class MyTypeFilter implements TypeFilter {
         Resource resource = metadataReader.getResource();
         String className = classMetadata.getClassName();
         // 检测名字包含 com.springboot.beanname.bean.bean1 的bean
-        if(className.contains("com.springboot.beanname.bean.bean1")){
+        if(className.contains("com.springboot.beanname.domain.bean1")){
             return true;
         }
         return false;

@@ -45,7 +45,6 @@ public class Demo extends TestConf {
 
         //查询数据库，更新缓存
         userService.updateUserByuuid(user);
-//        System.out.println("用户姓名为：" + user1.getName());
 
         //直接查缓存，不查数据库
         User user2 = userService.getUserByUuid("3");

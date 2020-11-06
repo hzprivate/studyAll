@@ -1,5 +1,7 @@
 package com.hibernate.validator.exception;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -13,12 +15,15 @@ import javax.validation.ValidationException;
 import java.util.Set;
 
 /**
+ * com.hibernate.validator.controller.RequestParamController  requestParam参数非实体类校验
+ * 定义捕捉controller层统一报错
  * @author hz
  * @create 2020-04-27
  */
 @ControllerAdvice
 @Component
 public class GlobalExceptionHandler {
+    private Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler
     @ResponseBody
