@@ -1,12 +1,9 @@
 package com.springboot.globalexception.test;
 
-import com.springboot.globalexception.bean.ResponseEnum;
-import com.springboot.globalexception.bean.User;
 import com.springboot.globalexception.dao.UserDao;
+import com.springboot.globalexception.domain.User;
 import org.junit.Test;
 import org.springframework.util.Assert;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -24,10 +21,4 @@ public class DemoTest {
 //            throw new IllegalArgumentException("用户不存在.");
 //        }
     }
-
-    @Test
-    public void test2() {
-        System.out.println(ResponseEnum.BAD_USER_TYPE.getCode());
-    }
-
 }
