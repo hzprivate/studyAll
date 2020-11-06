@@ -33,7 +33,7 @@ public class LambdaTest {
         //2.1 测试Function函数接口，返回对象
             //替换集合
         List<String> listString = Arrays.asList("10","2","9","8");
-        MyList.getFunctionReplaceList(listString,(s)->s.replace("*"));
+//        MyList.getFunctionReplaceList(listString,(s)->s.replace("*"));
 
 
         //3.测试函数接口排序
