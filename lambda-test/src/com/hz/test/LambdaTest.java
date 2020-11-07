@@ -21,7 +21,7 @@ public class LambdaTest {
         //        //equals
 //        list.forEach((p) -> System.out.println(p));
 
-        //2.测试自定义  void函数接口
+        //2.测试简单自定义  void函数接口
 //        invoke(()-> System.out.println("测试自定义 函数接口"));
         //equals
 //        invoke(new ConsumerAnimal() {
@@ -30,17 +30,16 @@ public class LambdaTest {
 //
 //            }
 //        });
-        //2.1 测试Function函数接口，返回对象
-            //替换集合
-        List<String> listString = Arrays.asList("10","2","9","8");
-//        MyList.getFunctionReplaceList(listString,(s)->s.replace("*"));
-
+        //2.1 测试复杂自定义函数接口  逻辑：对List集合中所有含有2 的数据元素替换位 *
+        List<String> listString = Arrays.asList("2","10","9","8");
+        MyList.replace2X(listString,(oldString,newString)->oldString.replace(oldString,newString));
+        System.out.println(listString);
 
         //3.测试函数接口排序
-          List<Integer> list = Arrays.asList(10,2,9,8);
+//          List<Integer> list = Arrays.asList(10,2,9,8);
 //        Collections.sort(list, Integer::compareTo);
         //equals  3.1
-        Collections.sort(list,(o1,o2)->o1.compareTo(o2));
+//        Collections.sort(list,(o1,o2)->o1.compareTo(o2));
         //equals  3.2
 //        Collections.sort(list, new Comparator<Integer>() {
 //            @Override
