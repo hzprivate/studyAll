@@ -6,6 +6,7 @@ import com.hz.util.MyList;
 import java.util.*;
 
 /**
+ * 测试lambda的应用
  * @author hz
  * @create 2020-11-06
  */
@@ -31,9 +32,9 @@ public class LambdaTest {
 //            }
 //        });
         //2.1 测试复杂自定义函数接口  逻辑：对List集合中所有含有2 的数据元素替换位 *
-        List<String> listString = Arrays.asList("2","10","9","8");
-        MyList.replace2X(listString,(oldString,newString)->oldString.replace(oldString,newString));
-        System.out.println(listString);
+//        List<String> listString = Arrays.asList("2","10","9","8");
+//        MyList.replace2X(listString,(oldString,newString)->oldString.replace(oldString,newString));
+//        System.out.println(listString);
 
         //3.测试函数接口排序
 //          List<Integer> list = Arrays.asList(10,2,9,8);
@@ -48,7 +49,6 @@ public class LambdaTest {
 //            }
 //        });
 //        System.out.println(list);
-
 
     }
 }
