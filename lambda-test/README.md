@@ -1,5 +1,5 @@
 # lambda-test 记录lambda使用
-1. lambda语法结构参数列表、箭头、声明语句（可根据情况省略）      
+1. lambda语法结构参数列表、箭头、声明语句（可根据情况省略   的）      
   (Type1 param1, Type2 param2, ..., TypeN paramN) -> { statment1; statment2; //............. return statmentM;}
      最终可省略至 ()->statment;
 2. lambda 常用函数式接口 Comparator，Runable，Callable等以及java.util.function（函数接口包）
