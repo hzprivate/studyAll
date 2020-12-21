@@ -16,7 +16,7 @@ public class LambdaTest {
         consumeAnimal.drink();
     }
     public static void main(String[] args) {
-        //1.测试普通集合 lambda遍历
+        //1. 测试普通集合 lambda遍历
 //        List<Integer> list = Arrays.asList(10,2,9,8);
 //        list.forEach(System.out::println);
         //        //equals
